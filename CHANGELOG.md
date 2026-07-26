@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-07-26
+
+### Added
+
+- `roadmap-status-capture` skill: full roadmap status capture for an initiative — three parallel evidence agents (Linear, git/GitHub, session context) reconciled in the main thread into a QA'd status report with per-task status tables and flagged discrepancies. Read-only; degrades gracefully when Linear is not configured (reports NOT_CONFIGURED and proposes a dependency-ordered phasing instead)
+
 ## [1.2.0] - 2026-06-21
 
 ### Added
@@ -42,7 +48,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Use Grep tool instead of bash grep in session-wrapup to avoid permission prompts
 
-[Unreleased]: https://github.com/pborenstein/handoff/compare/v1.2.0...HEAD
+[Unreleased]: https://github.com/MeekPhills/handoff-skills/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/MeekPhills/handoff-skills/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/pborenstein/handoff/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/pborenstein/handoff/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/pborenstein/handoff/releases/tag/v1.0.0

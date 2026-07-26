@@ -8,6 +8,7 @@ A Claude Code plugin for token-efficient project tracking across sessions.
 - `handoff:project-repo` - Initialize a meta-repo coordinating multiple related projects, each with its own independent git history
 - `handoff:session-pickup` - Read context from the previous session to prepare for new work
 - `handoff:session-wrapup` - Update project documentation and commit changes after a session
+- `handoff:roadmap-status-capture` - Reconcile Linear, git/GitHub, and session context into a QA'd roadmap status report
 
 ## Installation
 
@@ -83,6 +84,20 @@ Updates project documentation:
 - Add chronicle entry to `docs/chronicles/phase-X.md` (if significant work done)
 - Update DECISIONS.md if architectural decisions were made
 - Commit documentation changes
+
+### Capture roadmap status for an initiative
+
+```
+/handoff:roadmap-status-capture [initiative]
+```
+
+Read-only. Launches three parallel evidence agents — Linear issues, git/GitHub
+history, and the current session context — then reconciles them in the main
+thread into one master task list (Complete / In Progress / Blocked / Not
+Started) with a QA pass that flags every cross-source discrepancy. If Linear is
+not configured for the initiative, it says so explicitly and proposes a
+dependency-ordered phasing instead. With no argument, it infers the initiative
+from the current repo and states the assumption.
 
 ## Documentation System
 

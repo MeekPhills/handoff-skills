@@ -32,3 +32,19 @@ Architectural decisions for this project. Search with `grep -i "keyword" docs/DE
 - Keep migration tooling: Useful for plinth users migrating existing projects, but that's plinth's concern, not handoff's
 
 **Consequences**: Clean first-time experience. Users of the old plinth system who want to migrate will need to use plinth's migration tools before switching to handoff.
+
+---
+
+### DEC-003: roadmap-status-capture ships in handoff, not project-scoped (2026-07-26)
+
+**Status**: Active
+
+**Context**: The reviewed roadmap-status-capture skill could have lived in the fantasyhq repo's `.claude/skills/` (its first consumer, a Linear-tracked initiative) or in this plugin. The owner chose handoff.
+
+**Decision**: The skill ships in handoff as `handoff:roadmap-status-capture`, released with the normal versioning process (v1.3.0). Projects consume it via the plugin install; no project-local copies.
+
+**Alternatives considered**:
+- fantasyhq `.claude/skills/`: immediate availability there, but duplicates the skill per project and hides it from other initiatives
+- Both locations: guaranteed drift between copies
+
+**Consequences**: The skill stays generic — Linear-optional with an explicit NOT_CONFIGURED fallback — rather than hardcoding any workspace. Its first run (Gloatroom initiative) happens only on explicit owner go, from a session with the plugin loaded and Linear/GitHub MCP access.
