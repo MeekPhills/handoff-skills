@@ -7,6 +7,16 @@
 | 1 | Initial Release | ✅ Complete | Extracted from plinth |
 | 2 | New Skills | ✅ Complete | project-repo skill added |
 | 3 | Plinth Cleanup | ✅ Complete | Skills already removed from plinth |
+| 4 | Roadmap Status Capture | 🔄 Active | Skill shipped in v1.3.0; Gloatroom run on hold |
+
+## Current Phase
+
+### Phase 4: Roadmap Status Capture
+
+- [x] Add `roadmap-status-capture` skill (reviewed in prior session; landed 9d779d3)
+- [x] Release v1.3.0: CHANGELOG entry, plugin.json bump, README list + usage section
+- [ ] Run the capture for the Gloatroom initiative (ON HOLD until owner go)
+- [ ] Sync PROJECT-TRACKING-REFERENCE.md with the new skill
 
 ## Completed Phases
 
